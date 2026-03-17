@@ -7,16 +7,16 @@ export function Section1CV() {
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-8">
-      <div className="w-full max-w-5xl bg-white dark:bg-zinc-50 shadow-2xl rounded-sm p-8 md:p-16 lg:p-24 aspect-[1/1.4] md:aspect-auto relative overflow-hidden text-zinc-900 border border-zinc-200 group transition-all duration-300">
+      <div className="card w-full max-w-5xl bg-base-200 text-base-content shadow-2xl rounded-box p-8 md:p-16 lg:p-24 aspect-[1/1.4] md:aspect-auto relative overflow-hidden group transition-all duration-300 border border-base-300">
         
         {/* Subtle grid background for A4 feel */}
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#374151_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none" />
 
         <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start">
           
           {/* Profile Picture with Thug Life Easter Egg */}
           <div 
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-zinc-100 shadow-inner relative flex-shrink-0 cursor-pointer"
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-base-100 shadow-inner relative flex-shrink-0 cursor-pointer"
             onMouseEnter={() => setShowGlasses(true)}
             onMouseLeave={() => setShowGlasses(false)}
             onClick={() => setShowGlasses(!showGlasses)}
@@ -24,7 +24,7 @@ export function Section1CV() {
             <img 
               src="https://api.dicebear.com/7.x/avataaars/svg?seed=Thumeena" 
               alt="Profile" 
-              className="w-full h-full object-cover bg-zinc-200"
+              className="w-full h-full object-cover bg-base-300"
             />
             
             {/* Thug Life Glasses */}
@@ -53,20 +53,20 @@ export function Section1CV() {
               Thumeena<br/>Dev
             </motion.h1>
             
-            <div className="h-2 w-24 bg-red-500 my-6" />
+            <div className="h-2 w-24 bg-primary my-6 rounded-full" />
 
-            <h2 className="text-2xl font-mono text-zinc-500 mb-8">
+            <h2 className="text-2xl font-mono text-base-content/70 mb-8">
               Full-Stack Developer & Tech Enthusiast
             </h2>
 
-            <p className="text-zinc-600 leading-relaxed max-w-2xl font-serif text-lg">
+            <p className="text-base-content/80 leading-relaxed max-w-2xl font-serif text-lg">
               Crafting digital experiences with clean code and minimalist design. 
               Bridging the gap between beautiful user interfaces and robust backend systems.
               Leveling up one line of code at a time.
             </p>
 
             <div className="mt-12 flex gap-4">
-              <button className="flex items-center gap-2 bg-zinc-900 text-white px-6 py-3 rounded hover:bg-zinc-800 transition-colors cursor-pointer group/btn" data-cursor="hover">
+              <button className="btn btn-primary btn-lg group/btn rounded-full" data-cursor="hover">
                 <Download size={20} className="group-hover/btn:-translate-y-1 transition-transform" />
                 Download CV
               </button>

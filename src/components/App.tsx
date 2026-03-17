@@ -15,7 +15,7 @@ import { Section6Achievements } from "./sections/Section6Achievements";
 
 export default function App() {
   return (
-    <div className="bg-white dark:bg-black min-h-screen text-zinc-900 dark:text-zinc-100 font-sans transition-colors duration-300 relative selection:bg-red-500/30">
+    <div className="bg-base-100 min-h-screen text-base-content font-sans transition-colors duration-300 relative selection:bg-primary/30 selection:text-primary-content">
       
       {/* Global UI & Gamification Elements */}
       <CustomCursor />
@@ -27,12 +27,12 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main className="pb-16"> {/* padding bottom for XP Bar */}
-        <Section1CV />
-        <Section2About />
-        <Section3Skills />
-        <Section4Projects />
-        <Section5Experience />
-        <Section6Achievements />
+        <div id="top"><Section1CV /></div>
+        <div id="about"><Section2About /></div>
+        <div id="skills"><Section3Skills /></div>
+        <div id="projects"><Section4Projects /></div>
+        <div id="experience"><Section5Experience /></div>
+        <div id="achievements"><Section6Achievements /></div>
       </main>
 
       <Footer />

@@ -11,10 +11,10 @@ const CERTS = [
 
 export function Section6Achievements() {
   return (
-    <section className="py-32 overflow-hidden bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100">
+    <section className="py-32 overflow-hidden bg-base-200 text-base-content">
       <div className="max-w-6xl mx-auto px-4 md:px-8 mb-16">
         <h2 className="text-4xl font-bold flex items-center gap-4 uppercase tracking-wider">
-          <span className="text-zinc-400 font-mono text-lg">06.</span> Achievements
+          <span className="text-base-content/50 font-mono text-lg">06.</span> Achievements
         </h2>
       </div>
 
@@ -27,10 +27,10 @@ export function Section6Achievements() {
           className="flex gap-6 w-[200%] pl-4"
         >
           {[...CERTS.slice(0, 3), ...CERTS.slice(0, 3)].map((cert, i) => (
-            <div key={i} className="flex-1 min-w-[300px] h-[160px] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 flex flex-col justify-center relative overflow-hidden group">
-              <div className="absolute -right-4 -top-4 w-24 h-24 bg-yellow-500/10 rounded-full blur-2xl group-hover:bg-yellow-500/20 transition-colors" />
+            <div key={i} className="flex-1 min-w-[300px] h-[160px] bg-base-100 border border-base-300 rounded-box p-6 flex flex-col justify-center relative overflow-hidden group shadow-sm">
+              <div className="absolute -right-4 -top-4 w-24 h-24 bg-warning/10 rounded-full blur-2xl group-hover:bg-warning/20 transition-colors" />
               <h3 className="text-xl font-bold mb-2 relative z-10">{cert.title}</h3>
-              <p className="text-zinc-500 font-mono text-sm relative z-10">{cert.org}</p>
+              <p className="text-base-content/60 font-mono text-sm relative z-10">{cert.org}</p>
             </div>
           ))}
         </motion.div>
@@ -43,10 +43,10 @@ export function Section6Achievements() {
           className="flex gap-6 w-[200%] pl-4"
         >
           {[...CERTS.slice(3, 6), ...CERTS.slice(3, 6)].map((cert, i) => (
-            <div key={i} className="flex-1 min-w-[300px] h-[160px] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 flex flex-col justify-center relative overflow-hidden group">
-              <div className="absolute -right-4 -top-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-colors" />
+            <div key={i} className="flex-1 min-w-[300px] h-[160px] bg-base-100 border border-base-300 rounded-box p-6 flex flex-col justify-center relative overflow-hidden group shadow-sm">
+              <div className="absolute -right-4 -top-4 w-24 h-24 bg-info/10 rounded-full blur-2xl group-hover:bg-info/20 transition-colors" />
               <h3 className="text-xl font-bold mb-2 relative z-10">{cert.title}</h3>
-              <p className="text-zinc-500 font-mono text-sm relative z-10">{cert.org}</p>
+              <p className="text-base-content/60 font-mono text-sm relative z-10">{cert.org}</p>
             </div>
           ))}
         </motion.div>

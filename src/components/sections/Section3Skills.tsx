@@ -16,9 +16,9 @@ export function Section3Skills() {
   };
 
   return (
-    <section className="min-h-screen py-20 px-4 md:px-8 max-w-6xl mx-auto text-zinc-900 dark:text-zinc-100">
+    <section className="min-h-screen py-20 px-4 md:px-8 max-w-6xl mx-auto text-base-content">
       <h2 className="text-4xl font-bold mb-16 flex items-center gap-4 uppercase tracking-wider">
-        <span className="text-zinc-400 font-mono text-lg">03.</span> Skill Tree
+        <span className="text-base-content/40 font-mono text-lg">03.</span> Skill Tree
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -29,18 +29,18 @@ export function Section3Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 relative"
+          className="border-l-2 border-base-300 pl-8 relative"
         >
-          <div className="absolute top-0 -left-6 w-12 h-12 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-full flex items-center justify-center text-blue-500">
+          <div className="absolute top-0 -left-6 w-12 h-12 bg-base-100 border-2 border-base-300 rounded-full flex items-center justify-center text-info">
             <Monitor size={20} />
           </div>
-          <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-zinc-400 mt-2">Frontend</h3>
+          <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-base-content/50 mt-2">Frontend</h3>
           
           <div className="space-y-6">
             {["React / Next.js", "Astro", "Tailwind CSS", "Framer Motion", "TypeScript"].map((skill) => (
               <motion.div key={skill} variants={itemVariants} className="relative group">
-                <div className="absolute top-3 -left-[35px] w-6 h-[2px] bg-zinc-200 dark:bg-zinc-800 group-hover:bg-blue-500 transition-colors" />
-                <div className="bg-zinc-100 dark:bg-zinc-900 p-4 rounded-xl border border-transparent group-hover:border-blue-500 transition-colors cursor-default">
+                <div className="absolute top-3 -left-[35px] w-6 h-[2px] bg-base-300 group-hover:bg-info transition-colors" />
+                <div className="bg-base-200 p-4 rounded-box border border-transparent group-hover:border-info transition-colors cursor-default shadow-sm">
                   {skill}
                 </div>
               </motion.div>
@@ -54,18 +54,18 @@ export function Section3Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 relative"
+          className="border-l-2 border-base-300 pl-8 relative"
         >
-          <div className="absolute top-0 -left-6 w-12 h-12 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-full flex items-center justify-center text-green-500">
+          <div className="absolute top-0 -left-6 w-12 h-12 bg-base-100 border-2 border-base-300 rounded-full flex items-center justify-center text-success">
             <Server size={20} />
           </div>
-          <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-zinc-400 mt-2">Backend</h3>
+          <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-base-content/50 mt-2">Backend</h3>
           
           <div className="space-y-6">
             {["Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL"].map((skill) => (
               <motion.div key={skill} variants={itemVariants} className="relative group">
-                <div className="absolute top-3 -left-[35px] w-6 h-[2px] bg-zinc-200 dark:bg-zinc-800 group-hover:bg-green-500 transition-colors" />
-                <div className="bg-zinc-100 dark:bg-zinc-900 p-4 rounded-xl border border-transparent group-hover:border-green-500 transition-colors cursor-default">
+                <div className="absolute top-3 -left-[35px] w-6 h-[2px] bg-base-300 group-hover:bg-success transition-colors" />
+                <div className="bg-base-200 p-4 rounded-box border border-transparent group-hover:border-success transition-colors cursor-default shadow-sm">
                   {skill}
                 </div>
               </motion.div>
@@ -79,18 +79,18 @@ export function Section3Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 relative"
+          className="border-l-2 border-base-300 pl-8 relative"
         >
-          <div className="absolute top-0 -left-6 w-12 h-12 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-full flex items-center justify-center text-orange-500">
+          <div className="absolute top-0 -left-6 w-12 h-12 bg-base-100 border-2 border-base-300 rounded-full flex items-center justify-center text-warning">
             <Wrench size={20} />
           </div>
-          <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-zinc-400 mt-2">Tools</h3>
+          <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest text-base-content/50 mt-2">Tools</h3>
           
           <div className="space-y-6">
             {["Git & GitHub", "Docker", "VS Code", "Figma", "Vite"].map((skill) => (
               <motion.div key={skill} variants={itemVariants} className="relative group">
-                <div className="absolute top-3 -left-[35px] w-6 h-[2px] bg-zinc-200 dark:bg-zinc-800 group-hover:bg-orange-500 transition-colors" />
-                <div className="bg-zinc-100 dark:bg-zinc-900 p-4 rounded-xl border border-transparent group-hover:border-orange-500 transition-colors cursor-default">
+                <div className="absolute top-3 -left-[35px] w-6 h-[2px] bg-base-300 group-hover:bg-warning transition-colors" />
+                <div className="bg-base-200 p-4 rounded-box border border-transparent group-hover:border-warning transition-colors cursor-default shadow-sm">
                   {skill}
                 </div>
               </motion.div>

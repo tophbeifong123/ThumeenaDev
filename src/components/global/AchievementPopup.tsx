@@ -29,15 +29,15 @@ export function AchievementPopup() {
           initial={{ opacity: 0, y: -50, x: 50 }}
           animate={{ opacity: 1, y: 0, x: 0 }}
           exit={{ opacity: 0, y: -50, x: 50 }}
-          className="fixed top-20 right-8 z-50 bg-zinc-900 text-white p-4 rounded-xl border-2 border-yellow-500/50 shadow-[0_0_20px_rgba(234,179,8,0.3)] flex items-center gap-4 min-w-[300px]"
+          className="toast toast-top toast-end z-50 mt-16"
         >
-          <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-500">
-            <Trophy size={24} />
-          </div>
-          <div>
-            <div className="text-yellow-500 text-xs font-bold tracking-widest uppercase mb-1">Achievement Unlocked</div>
-            <div className="font-medium">ยินดีด้วย! คุณรู้จักฉันมากขึ้นแล้ว</div>
-            <div className="text-zinc-400 text-xs">You've reached the bottom of the page.</div>
+          <div className="alert alert-success shadow-lg text-success-content border border-success/30 bg-success/10 backdrop-blur-md">
+            <Trophy size={28} className="text-success" />
+            <div>
+              <div className="text-success text-xs font-bold tracking-widest uppercase mb-1">Achievement Unlocked</div>
+              <div className="font-medium">ยินดีด้วย! คุณรู้จักฉันมากขึ้นแล้ว</div>
+              <div className="text-xs opacity-70">You've reached the bottom of the page.</div>
+            </div>
           </div>
         </motion.div>
       )}

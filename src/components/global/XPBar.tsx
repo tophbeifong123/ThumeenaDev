@@ -18,18 +18,18 @@ export function XPBar() {
   }, [scrollYProgress]);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center bg-zinc-900 border-t-2 border-zinc-800 p-2 text-xs font-mono select-none">
-      <div className="px-4 text-green-400 font-bold w-20">LVL {level}</div>
-      <div className="flex-1 h-3 bg-zinc-800 rounded-full overflow-hidden border border-zinc-700 relative">
+    <div className="fixed bottom-0 left-0 right-0 z-50 flex items-center bg-base-300 border-t-2 border-base-200 p-2 text-xs font-mono select-none">
+      <div className="px-4 text-success font-bold w-20">LVL {level}</div>
+      <div className="flex-1 h-3 bg-base-100 rounded-full overflow-hidden border border-base-300 relative">
         <motion.div
-          className="absolute inset-y-0 left-0 bg-green-500 origin-left"
+          className="absolute inset-y-0 left-0 bg-success origin-left"
           style={{ scaleX }}
         />
-        <div className="absolute inset-0 flex items-center justify-center text-[10px] text-white/50 mix-blend-difference z-10">
+        <div className="absolute inset-0 flex items-center justify-center text-[10px] text-base-content/50 mix-blend-difference z-10">
           XP / 100
         </div>
       </div>
-      <div className="px-4 text-zinc-500 w-24 text-right">HP 100/100</div>
+      <div className="px-4 text-base-content/50 w-24 text-right">HP 100/100</div>
     </div>
   );
 }
