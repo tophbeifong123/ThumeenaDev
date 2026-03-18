@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'Portfolio CV ของ Thumeena — วิศวกรซอฟต์แวร์และนักพัฒนา Full-Stack' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="th">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+
+		<!-- Fonts: Outfit (Latin) + Noto Sans Thai -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Noto+Sans+Thai:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+
+		{/* Prevent FOUC — runs before first paint */}
+		<script is:inline>
+			(function () {
+				var stored = typeof localStorage !== 'undefined' && localStorage.getItem('theme');
+				var prefer = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				var theme = stored || prefer;
+				if (theme === 'dark') document.documentElement.classList.add('dark');
+				else document.documentElement.classList.remove('dark');
+			})();
+		</script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden; /* main handles scrolling */
+	}
+</style>

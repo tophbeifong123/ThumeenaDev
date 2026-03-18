@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+  logs: false;
+}
+
+@theme {
+  --color-primary:    var(--primary);
+  --color-secondary:  var(--secondary);
+  --color-background: var(--bg-main);
+  --color-foreground: var(--fg-main);
+  --color-card:       var(--bg-card);
+  --color-border:     var(--border-color);
+  --color-danger:     var(--danger);
+  --color-success:    var(--success);
+  --font-sans: 'Outfit', 'Noto Sans Thai', system-ui, sans-serif;
+}
+
+/* ── ☀️ Subaru Mode ─────────────────────────────────────────────────── */
+:root {
+  --bg-main:   #F5F3F0;
+  --bg-alt:    #ECEAE6;
+  --fg-main:   #1C1917;
+  --bg-card:   #FFFFFF;
+  --border-color: rgba(0,0,0,0.08);
+  --primary:   #EA580C;
+  --secondary: #292524;
+  --danger:    #EF4444;
+  --success:   #10B981;
+  --glass-bg:  rgba(245,243,240,0.80);
+  --glass-border: rgba(0,0,0,0.09);
+}
+
+/* ── 🌙 Emilia Mode ─────────────────────────────────────────────────── */
+.dark {
+  --bg-main:   #090D1A;
+  --bg-alt:    #0D1220;
+  --fg-main:   #CBD5E1;
+  --bg-card:   #111827;
+  --border-color: rgba(139,92,246,0.18);
+  --primary:   #8B5CF6;
+  --secondary: #67E8F9;
+  --danger:    #F87171;
+  --success:   #34D399;
+  --glass-bg:  rgba(9,13,26,0.75);
+  --glass-border: rgba(139,92,246,0.22);
+}
+
+/* ── Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg-main);
+  color: var(--fg-main);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.35s, color 0.35s;
+}
+
+/* ── Scroll snap ────────────────────────────────────────────────────── */
+.snap-container {
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.snap-container::-webkit-scrollbar { display: none; }
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  /* Alternating subtle bg — creates visual rhythm between sections */
+}
+
+/* Odd sections: base bg */
+.snap-section:nth-child(odd)  { background: var(--bg-main); }
+/* Even sections: slightly tinted bg */
+.snap-section:nth-child(even) { background: var(--bg-alt); }
+
+/* Astro island must not break grid */
+.snap-section > astro-island { display: contents; }
+
+/* ── Content wrapper (used in every component) ──────────────────────── */
+.section-inner {
+  width: min(90vw, 1280px);
+  padding: 4.5rem 0 3rem;
+}
+
+/* ── Glass util ──────────────────────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  border: 1px solid var(--glass-border);
+}
+
+/* ── Gradient text ──────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 55%, var(--secondary)));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Card hover ──────────────────────────────────────────────────────── */
+.card-hover {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  border-color: var(--primary) !important;
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--primary) 16%, transparent);
+}
