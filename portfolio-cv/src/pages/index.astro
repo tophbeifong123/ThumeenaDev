@@ -1,25 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import Trials from '../components/Trials';
+import Navbar    from '../components/Navbar';
+import Hero      from '../components/Hero';
+import Intro     from '../components/Intro';
+import Skills    from '../components/Skills';
+import Projects  from '../components/Projects';
+import Trials    from '../components/Trials';
 import SavePoints from '../components/SavePoints';
+import CustomCursor from '../components/CustomCursor';
 ---
 
-<Layout title="ธรรมีนา | นักพัฒนา Full-Stack">
-	<Navbar client:load />
-	<main class="snap-container" id="main-scroll">
-		<section id="hero"     class="snap-section"><Hero client:load /></section>
-		<section id="skills"   class="snap-section"><Skills client:visible /></section>
-		<section id="projects" class="snap-section"><Projects client:visible /></section>
-		<section id="trials"   class="snap-section"><Trials client:visible /></section>
-		<section id="about"    class="snap-section"><SavePoints client:visible /></section>
-		<!-- Minimal footer inside the scroll container -->
-		<footer class="flex items-center justify-center gap-2 py-5 text-xs"
-			style="color:var(--fg-main);opacity:0.3;background:var(--bg-alt);">
-			© 2025 ธรรมีนา &nbsp;·&nbsp; Start from Zero
-		</footer>
-	</main>
+<Layout title="Thummeena | Full-Stack Developer">
+  <CustomCursor client:load />
+  <Navbar client:load />
+  <main class="snap-container" id="main-scroll">
+
+    <!-- Snap 1: Full-screen photo + name reveal (always dark) -->
+    <section id="hero"
+      class="snap-section"
+      style="background:#080b14; min-height:100dvh; padding-top:0;">
+      <Hero client:load />
+    </section>
+
+    <!-- Snap 2: About/Intro (dark continuation) -->
+    <section id="intro"
+      class="snap-section"
+      style="background:#0A0F1E; min-height:100dvh; padding-top:0;">
+      <Intro client:visible />
+    </section>
+
+    <!-- Snap 3: Skills — gradient bridge from dark → theme bg -->
+    <section id="skills"
+      class="snap-section theme-odd from-dark">
+      <Skills client:visible />
+    </section>
+
+    <!-- Snap 4+: Projects (each project renders its own full-page snap) -->
+    <Projects client:visible />
+
+    <!-- Snap End: Trials -->
+    <section id="trials"
+      class="snap-section theme-odd">
+      <Trials client:visible />
+    </section>
+
+    <!-- Snap 6: Save Points -->
+    <section id="about"
+      class="snap-section theme-even">
+      <SavePoints client:visible />
+    </section>
+
+    <!-- Footer (not a snap section) -->
+    <footer class="py-5 text-center text-xs"
+      style="background:var(--bg-alt); color:var(--fg-main); opacity:0.28">
+      © 2025 ธรรมีนา · Start from Zero
+    </footer>
+  </main>
 </Layout>
