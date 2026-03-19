@@ -34,8 +34,8 @@
   --intro-dark:   #0A0F1E;
 }
 
-/* ── 🌙 Emilia ────────────────────────────────────────────────────── */
-.dark, .theme-even {
+/* ── 🌙 Emilia (Dark Theme - Activated by Toggle) ─────────── */
+.dark {
   --bg-main:      #090D1A;
   --bg-alt:       #0D1220;
   --fg-main:      #CBD5E1;
