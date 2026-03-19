@@ -74,11 +74,13 @@ export default function Hero() {
         className="absolute inset-[-5%]"
         style={{ x: bgX, y: bgY, willChange: "transform" }}
       >
-        <img
-          src="/subaru-alone.jpg"
-          alt=""
-          aria-hidden="true"
-          className="w-full h-full object-cover object-center"
+        <motion.img
+          src="/subaru-alone.webp"
+          alt="Night Sky Background"
+          className="w-full h-full object-cover origin-center dark:opacity-40 opacity-70"
+          initial={{ scale: 1.15 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 6, ease: "easeOut" }}
         />
       </motion.div>
 
@@ -115,7 +117,7 @@ export default function Hero() {
               "0 0 120px rgba(139,92,246,0.3), 0 0 40px rgba(234,88,12,0.18)",
           }}
         >
-          Thumeena
+          Thummeena
         </motion.h1>
       </motion.div>
 
@@ -131,8 +133,8 @@ export default function Hero() {
         transition={{ duration: 1.0, delay: 0.1, ease: "easeOut" }}
       >
         <img
-          src="/me.png"
-          alt="ธรรมีนา เป็งจ้าย"
+          src="/me.webp"
+          alt="ธรรมีนา เพ็งชัย"
           className="absolute bottom-0 right-0 max-h-dvh w-auto object-contain object-bottom"
           onError={(e) => {
             (e.target as HTMLImageElement).style.display = "none";
@@ -153,7 +155,7 @@ export default function Hero() {
               className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase mb-2"
               style={{ color: "var(--primary)" }}
             >
-              ✦ Thumeena Toto Pengchai
+              ✦ Thummeena Toto Pengchai
             </p>
             <p className="text-sm sm:text-base text-white/50 leading-relaxed font-medium">
               Computer Engineering Student at PSU | Aspiring Full-stack Developer (Next.js & NestJS)<br/>

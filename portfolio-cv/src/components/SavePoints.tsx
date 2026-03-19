@@ -21,7 +21,7 @@ const POINTS = [
     bullets: ["ทักษะหลัก: Web / Game Development", "กิจกรรมพิเศษ: Esports"],
     icon: <GraduationCap className="w-4 h-4" />,
     current: true,
-    bgImage: "/Psu.jpg",
+    bgImage: "/Psu.webp",
   },
   {
     id: "bonmek",
@@ -36,7 +36,7 @@ const POINTS = [
     ],
     icon: <Code2 className="w-4 h-4" />,
     current: true,
-    bgImage: "/Hybrid.jpg",
+    bgImage: "/Hybrid.webp",
   },
   {
     id: "icpc_2025",
@@ -51,7 +51,7 @@ const POINTS = [
     ],
     icon: <Trophy className="w-4 h-4" />,
     current: false,
-    bgImage: "/ICPP.jpg",
+    bgImage: "/ICPP.webp",
   },
   {
     id: "cert_ctf",
@@ -63,7 +63,7 @@ const POINTS = [
     bullets: ["Cybersecurity (ความปลอดภัยทางไซเบอร์)"],
     icon: <Star className="w-4 h-4" />,
     current: false,
-    bgImage: "/ncsa-ctf.jpg",
+    bgImage: "/ncsa-ctf.webp",
   },
   {
     id: "cert_ai",
@@ -89,7 +89,7 @@ const POINTS = [
     ],
     icon: <Medal className="w-4 h-4" />,
     current: false,
-    bgImage: "/OpenApi.jpg",
+    bgImage: "/OpenApi.webp",
   },
 ];
 

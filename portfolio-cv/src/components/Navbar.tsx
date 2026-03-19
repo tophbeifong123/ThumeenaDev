@@ -96,7 +96,7 @@ const SOCIAL = [
   {
     icon: <Mail className="w-3.5 h-3.5" />,
     label: "Email",
-    href: "mailto:thumeena@example.com",
+    href: "mailto:thrrmunaphengchay@gmail.com",
   },
 ];
 

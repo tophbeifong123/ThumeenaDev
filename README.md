@@ -2,13 +2,13 @@
 
 # 🌠 Thumeena's Cinematic Portfolio
 
-![Portfolio Preview](./public/preview.png)
-*(Screenshot / GIF ของหน้าตาเว็บ Portfolio)*
+![Portfolio Preview](./public/preview.webp)
+_(Screenshot / GIF ของหน้าตาเว็บ Portfolio)_
 
 A high-performance, immersive, and awe-inspiring developer portfolio crafted with Astro, React, and Framer Motion. Featuring full-view scroll snapping, cinematic animations, and a dynamic "Re:Zero" aesthetic theme toggle.
 
 **[🌐 VIEW LIVE DEMO](#)**  
-*(ใส่ลิงก์เว็บไซต์ที่ Deploy เสร็จแล้วตรงนี้)*
+_(ใส่ลิงก์เว็บไซต์ที่ Deploy เสร็จแล้วตรงนี้)_
 
 </div>
 
@@ -27,6 +27,7 @@ A high-performance, immersive, and awe-inspiring developer portfolio crafted wit
 ## ✨ Key Features
 
 ฟีเจอร์เด่นๆ ที่ช่วยเพิ่มประสบการณ์ผู้ใช้งานและโชว์ทักษะ Frontend:
+
 - **🎭 Dynamic Theming (Re:Zero Inspired):** ระบบสลับโหมด Light Mode (Subaru Orange) และ Dark Mode (Emilia Purple) ที่เปลี่ยนโทนสีและมู้ดของทั้งเว็บแบบไร้รอยต่อ
 - **📜 Full-View Scroll Snapping:** เลื่อนหน้าจอแบบ Snap เข้าหากันทีละ Section เหมือนการพรีเซนต์สไลด์ (Presentation Style)
 - **🎬 Cinematic Animations:** หรูหราด้วย `framer-motion` ทั้งเอฟเฟกต์ Ken Burns, การทะยอยปรากฏของกริด (Stagger Children) และ Depth-of-field blur unmasking
@@ -38,23 +39,27 @@ A high-performance, immersive, and awe-inspiring developer portfolio crafted wit
 ถ้าต้องการรันโปรเจกต์นี้บนเครื่อง Local ของคุณ สามารถทำตามสเต็ปด้านล่างนี้ได้เลยครับ:
 
 ### ข้อมูลเบื้องต้น
-- ต้องมี `Node.js` (v18+) 
+
+- ต้องมี `Node.js` (v18+)
 - ใช้ `pnpm` ในการจัดการ Package (หรือจะใช้ `npm`, `yarn` ก็ได้)
 
 ### ขั้นตอนการติดตั้ง
 
 1. **Clone แหล่งเก็บข้อมูล (Repository):**
+
    ```bash
    git clone https://github.com/tophbeifong123/portfolio-cv.git
    cd portfolio-cv
    ```
 
 2. **ติดตั้ง Dependencies:**
+
    ```bash
    pnpm install
    ```
 
 3. **รัน Local Server:**
+
    ```bash
    pnpm dev
    ```
@@ -65,6 +70,7 @@ A high-performance, immersive, and awe-inspiring developer portfolio crafted wit
 ## 🌍 Deployment
 
 โปรเจกต์ Web Profile นี้รองรับการ Deploy ผ่านผู้ให้บริการ Cloud ชั้นนำอย่างง่ายดาย ไม่ว่าจะเป็น:
+
 - **Vercel:** (Recommended) เพียงเชื่อมต่อกับ GitHub Repository โปรเจกต์จะถูก Build อัตโนมัติ (ปัจจุบันโปรเจกต์นี้ถูกปรับจูนเพื่อประสิทธิภาพสูงสุดบน Edge Networks แล้ว)
 - **Netlify** / **Cloudflare Pages:** รองรับสถาปัตยกรรม SSR / SSG ของ Astro ได้อย่างเต็มรูปแบบ
 
@@ -72,9 +78,10 @@ A high-performance, immersive, and awe-inspiring developer portfolio crafted wit
 
 สามารถติดต่อผมหรือพูดคุยเรื่องการทำงาน/โอกาสใหม่ๆ ได้ตามช่องทางนี้ครับ:
 
-- **Email:** <!-- ใส่ Email ของคุณที่นี่ -->
+- **Email:** thrrmunaphengchay@gmail.com
 - **LinkedIn:** [Thumeena Pengchai](https://www.linkedin.com/in/thumeena-pengchai-6babb5351/)
 - **GitHub:** [@tophbeifong123](https://github.com/tophbeifong123)
 
 ---
-*Created with ❤️ by Thumeena Toto Pengchai*
+
+_Created with ❤️ by Thumeena Toto Pengchai_
