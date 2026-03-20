@@ -75,6 +75,7 @@ const POINTS = [
     bullets: ["Cybersecurity", "Artificial Intelligence Awareness"],
     icon: <BookOpen className="w-4 h-4" />,
     current: false,
+    bgImage: "/PSU_Cybersecurity.webp",
   },
   {
     id: "psu_openapi",

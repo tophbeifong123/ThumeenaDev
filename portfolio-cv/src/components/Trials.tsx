@@ -49,17 +49,17 @@ const TRIALS_DATA = [
     date: "2024",
     color: "#3B82F6",
   },
+  // {
+  //   id: 6,
+  //   category: "AI & Data",
+  //   icon: <Trophy className="w-5 h-5" />,
+  //   title: "SuperAI Engineer Season 3",
+  //   detail: "ผ่านการทดสอบเข้าแคมป์ระดับประเทศ",
+  //   date: "2023",
+  //   color: "#EAB308",
+  // },
   {
     id: 6,
-    category: "AI & Data",
-    icon: <Trophy className="w-5 h-5" />,
-    title: "SuperAI Engineer Season 3",
-    detail: "ผ่านการทดสอบเข้าแคมป์ระดับประเทศ",
-    date: "2023",
-    color: "#EAB308",
-  },
-  {
-    id: 7,
     category: "Project",
     icon: <Code2 className="w-5 h-5" />,
     title: "NSC Thailand",
@@ -70,27 +70,9 @@ const TRIALS_DATA = [
 ];
 
 // Combine into 3 distinct rows for visual variety
-const ROW1 = [
-  TRIALS_DATA[0],
-  TRIALS_DATA[1],
-  TRIALS_DATA[2],
-  TRIALS_DATA[3],
-  TRIALS_DATA[4],
-];
-const ROW2 = [
-  TRIALS_DATA[5],
-  TRIALS_DATA[6],
-  TRIALS_DATA[0],
-  TRIALS_DATA[1],
-  TRIALS_DATA[2],
-];
-const ROW3 = [
-  TRIALS_DATA[3],
-  TRIALS_DATA[4],
-  TRIALS_DATA[5],
-  TRIALS_DATA[6],
-  TRIALS_DATA[0],
-];
+const ROW1 = [...TRIALS_DATA];
+const ROW2 = [...TRIALS_DATA.slice(3), ...TRIALS_DATA.slice(0, 3)];
+const ROW3 = [...TRIALS_DATA.slice(1), ...TRIALS_DATA.slice(0, 1)];
 
 const MARQUEE_ROWS = [
   { id: "row1", speed: "40s", direction: "normal", items: [...ROW1, ...ROW1] },

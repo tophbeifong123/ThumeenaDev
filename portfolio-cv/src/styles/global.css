@@ -92,6 +92,13 @@ body {
               color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ── 404 page: dark override so global body bg doesn't bleed through ─── */
+.page-404 body,
+.page-404 main {
+  background: #080b14 !important;
+  color: #fff !important;
+}
+
 /* ── Scroll snap container ─────────────────────────────────────────── */
 .snap-container {
   height: 100dvh;

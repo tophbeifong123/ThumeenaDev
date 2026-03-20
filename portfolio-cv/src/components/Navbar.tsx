@@ -86,12 +86,12 @@ const SOCIAL = [
   {
     icon: <Github className="w-3.5 h-3.5" />,
     label: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/tophbeifong123",
   },
   {
     icon: <Linkedin className="w-3.5 h-3.5" />,
     label: "LinkedIn",
-    href: "https://linkedin.com/",
+    href: "https://www.linkedin.com/in/thumeena-pengchai-6babb5351/",
   },
   {
     icon: <Mail className="w-3.5 h-3.5" />,

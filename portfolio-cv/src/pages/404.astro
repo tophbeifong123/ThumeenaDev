@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NotFound from '../components/NotFound';
+import CustomCursor from '../components/CustomCursor';
+---
+
+<Layout title="404 Not Found | Thumeena">
+  <script is:inline>
+    document.documentElement.classList.add('page-404');
+  </script>
+  <CustomCursor client:load />
+  <main class="w-full h-full overflow-hidden">
+    <NotFound client:load />
+  </main>
+</Layout>
