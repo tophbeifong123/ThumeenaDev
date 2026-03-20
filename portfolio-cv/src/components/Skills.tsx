@@ -6,12 +6,11 @@ import {
   SiUnity, SiGit, SiFigma,
   SiCplusplus, SiC, SiPython
 } from 'react-icons/si';
-import { FaCode } from 'react-icons/fa';
 import { VscVscode } from 'react-icons/vsc';
 import { TbBrandCSharp } from 'react-icons/tb';
 
 const CATS = [
-  { id:'fe', lore:'ศิลปะแห่งวิญญาณ', tech:'Frontend Web',      
+  { id:'fe', lore:'ศิลปะแห่งวิญญาณ', tech:'Frontend Web', color: '#8B5CF6',
     skills:[
       { name: 'React', icon: <SiReact /> },
       { name: 'Next.js', icon: <SiNextdotjs /> },
@@ -22,7 +21,7 @@ const CATS = [
       { name: 'JavaScript', icon: <SiJavascript /> }
     ] 
   },
-  { id:'be', lore:'เวทมนตร์ยิน',     tech:'Backend & DevOps', 
+  { id:'be', lore:'เวทมนตร์ยิน', tech:'Backend & DevOps', color: '#EA580C',
     skills:[
       { name: 'NestJS', icon: <SiNestjs /> },
       { name: 'Go', icon: <SiGo/> },
@@ -33,7 +32,7 @@ const CATS = [
       { name: 'Kubernetes', icon: <SiKubernetes /> }
     ] 
   },
-  { id:'cs', lore:'ตรรกะและภาษา',     tech:'Languages / Engine', 
+  { id:'cs', lore:'ตรรกะและภาษา', tech:'Languages / Engine', color: '#3B82F6',
     skills:[
       { name: 'C', icon: <SiC /> },
       { name: 'C++', icon: <SiCplusplus /> },
@@ -42,7 +41,7 @@ const CATS = [
       { name: 'Unity', icon: <SiUnity /> }
     ] 
   },
-  { id:'gm', lore:'คลังอาวุธ',       tech:'Tools',    
+  { id:'gm', lore:'คลังอาวุธ', tech:'Tools', color: '#10B981',
     skills:[
       { name: 'Git', icon: <SiGit /> },
       { name: 'VS Code', icon: <VscVscode /> },
@@ -54,6 +53,7 @@ const CATS = [
 export default function Skills() {
   return (
     <div className="section-inner">
+      {/* Heading */}
       <div className="mb-12">
         <motion.p initial={{opacity:0}} whileInView={{opacity:1}} viewport={{once:true}}
           className="text-xs font-semibold tracking-[0.2em] uppercase mb-2" style={{color:'var(--primary)'}}>
@@ -75,24 +75,43 @@ export default function Skills() {
             initial={{ opacity: 0, y: 30 }} 
             whileInView={{ opacity: 1, y: 0 }} 
             viewport={{ once: true }}
-            transition={{ delay: ci * 0.1, duration: 0.5, ease: "easeOut" }}
-            className="group relative p-6 sm:p-8 rounded-4xl overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+            transition={{ delay: ci * 0.1, duration: 0.6, ease: [0.16,1,0.3,1] }}
+            className="group relative p-6 sm:p-8 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2"
             style={{ 
               background: 'var(--bg-card)', 
-              border: '1px solid var(--border-color)',
-            }}>
-            
-            {/* Ambient Glow */}
-            <div className="absolute -inset-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none blur-2xl z-0"
-                 style={{ background: 'radial-gradient(circle at center, rgba(234,88,12,0.08) 0%, transparent 70%)' }} />
-            
+              border: `1px solid color-mix(in srgb, ${cat.color} 22%, var(--border-color))`,
+              boxShadow: `0 0 0 0 ${cat.color}`,
+            }}
+          >
+            {/* Top colored accent bar */}
+            <div 
+              className="absolute top-0 left-0 right-0 h-[2px]"
+              style={{ background: `linear-gradient(to right, ${cat.color}, transparent)` }} 
+            />
+
+            {/* Hover glow */}
+            <div 
+              className="absolute -inset-4 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none blur-3xl z-0"
+              style={{ background: `radial-gradient(circle at 30% 30%, color-mix(in srgb, ${cat.color} 18%, transparent) 0%, transparent 70%)` }} 
+            />
+
+            {/* Thematic rune glyph background watermark */}
+            <div 
+              className="absolute bottom-3 right-4 text-[5rem] font-black opacity-[0.04] group-hover:opacity-[0.07] transition-opacity select-none pointer-events-none leading-none"
+              style={{ color: cat.color }}
+            >
+              {cat.id === 'fe' ? '✦' : cat.id === 'be' ? '⟁' : cat.id === 'cs' ? '∆' : '◈'}
+            </div>
+
             <div className="relative z-10 flex flex-col h-full">
               <div className="flex items-center gap-3 mb-6">
+                {/* Colored icon dot */}
+                <div className="w-3 h-3 rounded-full shrink-0" style={{ background: cat.color, boxShadow: `0 0 8px ${cat.color}` }} />
                 <div className="flex-1">
-                  <span className="text-xl sm:text-2xl font-black block leading-tight mb-1" style={{ color: 'var(--fg-main)' }}>
+                  <span className="text-xl sm:text-2xl font-black block leading-tight mb-0.5" style={{ color: 'var(--fg-main)' }}>
                     {cat.tech}
                   </span>
-                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: 'var(--primary)' }}>
+                  <span className="text-xs font-bold tracking-widest uppercase" style={{ color: cat.color }}>
                     {cat.lore}
                   </span>
                 </div>
@@ -107,20 +126,16 @@ export default function Skills() {
                     transition={{ delay: ci * 0.1 + si * 0.05 }}
                     className="flex justify-center items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-110"
                     style={{ 
-                      background: 'color-mix(in srgb, var(--primary) 8%, transparent)', 
+                      background: `color-mix(in srgb, ${cat.color} 9%, var(--bg-main))`, 
                       color: 'var(--fg-main)', 
-                      border: '1px solid color-mix(in srgb, var(--primary) 20%, transparent)' 
+                      border: `1px solid color-mix(in srgb, ${cat.color} 25%, transparent)` 
                     }}>
-                    <span className="text-[14px]" style={{ color: 'var(--primary)' }}>{sk.icon}</span>
+                    <span className="text-[14px]" style={{ color: cat.color }}>{sk.icon}</span>
                     {sk.name}
                   </motion.span>
                 ))}
               </div>
             </div>
-            
-            {/* Corner Accent */}
-            <div className="absolute top-0 right-0 w-16 h-16 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                 style={{ background: 'radial-gradient(circle at top right, rgba(234,88,12,0.2) 0%, transparent 70%)' }} />
           </motion.div>
         ))}
       </div>

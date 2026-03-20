@@ -111,6 +111,16 @@ export default function Trials() {
         >
           Trials <span className="gradient-text">Overcome</span>
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.45 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="text-xs tracking-[0.3em] uppercase mt-1"
+          style={{ color: "var(--primary)" }}
+        >
+          — ทุกบททดสอบคือหนทางสู่รอบใหม่ —
+        </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 10 }}
@@ -151,16 +161,21 @@ export default function Trials() {
             {row.items.map((item, idx) => (
               <div
                 key={`${row.id}-${item.id}-${idx}`}
-                className="shrink-0 w-[280px] sm:w-[350px] rounded-2xl p-6 cursor-pointer relative overflow-hidden group"
+                className="shrink-0 w-[280px] sm:w-[350px] rounded-2xl p-6 cursor-pointer relative overflow-hidden group transition-all duration-300 hover:-translate-y-1"
                 style={{
                   background: "var(--bg-card)",
-                  border: "1px solid var(--border-color)",
+                  border: `1px solid color-mix(in srgb, ${item.color} 18%, var(--border-color))`,
                 }}
               >
-                {/* Colored Line Accent on hover */}
+                {/* Colored gradient top line */}
                 <div
-                  className="absolute top-0 left-0 w-full h-1 opacity-40 group-hover:opacity-100 transition-opacity"
-                  style={{ background: item.color }}
+                  className="absolute top-0 left-0 w-full h-[2px] opacity-50 group-hover:opacity-100 transition-opacity"
+                  style={{ background: `linear-gradient(to right, ${item.color}, transparent)` }}
+                />
+                {/* Hover shimmer sweep */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ background: `radial-gradient(ellipse at 20% 20%, color-mix(in srgb, ${item.color} 8%, transparent) 0%, transparent 60%)` }}
                 />
 
                 <div className="flex items-start justify-between mb-8">

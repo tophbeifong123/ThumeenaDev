@@ -146,6 +146,16 @@ const ProjectCard = ({
             >
               The Chronicles
             </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.4 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="text-xs tracking-[0.3em] uppercase mt-2"
+              style={{ color: "#EA580C" }}
+            >
+              — ทุกเควส์คือบทเรียนรู้ที่ต้องแลฏด้วยความตาย —
+            </motion.p>
           </div>
         )}
         <motion.div
@@ -166,7 +176,13 @@ const ProjectCard = ({
               className="relative rounded-3xl overflow-hidden aspect-video lg:aspect-4/3 cursor-crosshair shadow-2xl"
               style={{
                 background: "var(--bg-card)",
-                border: "1px solid var(--border-color)",
+                border: hovered
+                  ? "1px solid rgba(139,92,246,0.5)"
+                  : "1px solid var(--border-color)",
+                transition: "border-color 0.4s ease",
+                boxShadow: hovered
+                  ? "0 0 30px rgba(139,92,246,0.25), inset 0 0 20px rgba(139,92,246,0.05)"
+                  : "none",
               }}
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
