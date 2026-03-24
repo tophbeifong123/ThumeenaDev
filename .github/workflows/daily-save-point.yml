@@ -1,0 +1,33 @@
+name: Auto Update Save Point (Daily Commit)
+
+on:
+  schedule:
+    # รันตอนเที่ยงคืนของเวลา UTC ทุกวัน (ประมาณ 7 โมงเช้าเวลาไทย)
+    - cron: '0 0 * * *'
+  # ปุ่มกดรันเองด้วยมือ (เผื่ออยากเทสปั๊มเอง)
+  workflow_dispatch:
+
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          # ต้องใช้ token ของ github เพื่อให้มีสิทธิ์ push กลับ
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📝 Update Save Point Log
+        run: |
+          echo "## 🔮 Return by Death: Save Point Reached" > SAVE_POINT.md
+          echo "Last saved at: **$(date -u +'%Y-%m-%d %H:%M:%S UTC')**" >> SAVE_POINT.md
+          echo "" >> SAVE_POINT.md
+          echo "_The cycle continues..._" >> SAVE_POINT.md
+
+      - name: 🚀 Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add SAVE_POINT.md
+          # เช็คก่อนว่ามีอะไรเปลี่ยนไหม ถ้ามีค่อย commit
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: 🔁 Auto-sync save point timeline" && git push)
