@@ -1,87 +1,137 @@
 <div align="center">
 
-# 🌠 Thumeena's Cinematic Portfolio
+# ✦ Thummeena · Portfolio CV
 
-![Portfolio Preview](./public/preview.webp)
-_(Screenshot / GIF ของหน้าตาเว็บ Portfolio)_
+[![Live Demo](https://img.shields.io/badge/🌐_Live-thumeena.dev-EA580C?style=for-the-badge)](https://www.thumeena.dev)
+[![Deploy Status](https://img.shields.io/github/actions/workflow/status/tophbeifong123/ThumeenaDev/azure-static-web-apps-ambitious-coast-03b85f800.yml?style=for-the-badge&label=Deploy&logo=microsoftazure)](https://github.com/tophbeifong123/ThumeenaDev/actions)
+[![License](https://img.shields.io/badge/License-MIT-8B5CF6?style=for-the-badge)](LICENSE)
 
-A high-performance, immersive, and awe-inspiring developer portfolio crafted with Astro, React, and Framer Motion. Featuring full-view scroll snapping, cinematic animations, and a dynamic "Re:Zero" aesthetic theme toggle.
-
-**[🌐 VIEW LIVE DEMO](#)**  
-_(ใส่ลิงก์เว็บไซต์ที่ Deploy เสร็จแล้วตรงนี้)_
+A **cinematic, Re:Zero-themed** developer portfolio built with Astro + React + Framer Motion.  
+Features full-screen scroll-snapping, dual character themes, and immersive animations.
 
 </div>
 
 ---
 
-## 🛠️ Tech Stack
+## 🎭 Theme System
 
-อาวุธและเครื่องมือที่ใช้ในการสร้าง Web Profile นี้:
+| Theme | Character | Color | Activated |
+|-------|-----------|-------|-----------|
+| ☀️ **Light** | Subaru Natsuki | `#EA580C` Orange | Default |
+| 🌙 **Dark** | Emilia | `#8B5CF6` Purple | Toggle button in Navbar |
 
-![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-
-## ✨ Key Features
-
-ฟีเจอร์เด่นๆ ที่ช่วยเพิ่มประสบการณ์ผู้ใช้งานและโชว์ทักษะ Frontend:
-
-- **🎭 Dynamic Theming (Re:Zero Inspired):** ระบบสลับโหมด Light Mode (Subaru Orange) และ Dark Mode (Emilia Purple) ที่เปลี่ยนโทนสีและมู้ดของทั้งเว็บแบบไร้รอยต่อ
-- **📜 Full-View Scroll Snapping:** เลื่อนหน้าจอแบบ Snap เข้าหากันทีละ Section เหมือนการพรีเซนต์สไลด์ (Presentation Style)
-- **🎬 Cinematic Animations:** หรูหราด้วย `framer-motion` ทั้งเอฟเฟกต์ Ken Burns, การทะยอยปรากฏของกริด (Stagger Children) และ Depth-of-field blur unmasking
-- **🍱 Bento Box Grid Layouts:** จัดการข้อมูลที่ซับซ้อนอย่าง ทักษะ และ ประสบการณ์ ให้อยู่ในหน้าจอแบบตารางญี่ปุ่น (Bento Box) ที่เข้าถึงง่ายและ Responsive
-- **🖱️ Magnetic Custom Cursor:** เมาส์แบบ Custom ที่ขยายและดูดติดกับปุ่มที่เรากดได้ (Interactive Hover)
-
-## 🚀 Getting Started / Installation
-
-ถ้าต้องการรันโปรเจกต์นี้บนเครื่อง Local ของคุณ สามารถทำตามสเต็ปด้านล่างนี้ได้เลยครับ:
-
-### ข้อมูลเบื้องต้น
-
-- ต้องมี `Node.js` (v18+)
-- ใช้ `pnpm` ในการจัดการ Package (หรือจะใช้ `npm`, `yarn` ก็ได้)
-
-### ขั้นตอนการติดตั้ง
-
-1. **Clone แหล่งเก็บข้อมูล (Repository):**
-
-   ```bash
-   git clone https://github.com/tophbeifong123/portfolio-cv.git
-   cd portfolio-cv
-   ```
-
-2. **ติดตั้ง Dependencies:**
-
-   ```bash
-   pnpm install
-   ```
-
-3. **รัน Local Server:**
-
-   ```bash
-   pnpm dev
-   ```
-
-4. **เปิดดูเว็บไซต์:**
-   เข้าไปที่ `http://localhost:4321` เพื่อท่องจักรวาล Portfolio!
-
-## 🌍 Deployment
-
-โปรเจกต์ Web Profile นี้รองรับการ Deploy ผ่านผู้ให้บริการ Cloud ชั้นนำอย่างง่ายดาย ไม่ว่าจะเป็น:
-
-- **Vercel:** (Recommended) เพียงเชื่อมต่อกับ GitHub Repository โปรเจกต์จะถูก Build อัตโนมัติ (ปัจจุบันโปรเจกต์นี้ถูกปรับจูนเพื่อประสิทธิภาพสูงสุดบน Edge Networks แล้ว)
-- **Netlify** / **Cloudflare Pages:** รองรับสถาปัตยกรรม SSR / SSG ของ Astro ได้อย่างเต็มรูปแบบ
-
-## 📬 Contact / Social Links
-
-สามารถติดต่อผมหรือพูดคุยเรื่องการทำงาน/โอกาสใหม่ๆ ได้ตามช่องทางนี้ครับ:
-
-- **Email:** thrrmunaphengchay@gmail.com
-- **LinkedIn:** [Thumeena Pengchai](https://www.linkedin.com/in/thumeena-pengchai-6babb5351/)
-- **GitHub:** [@tophbeifong123](https://github.com/tophbeifong123)
+Theme preference is persisted to `localStorage` (no flicker on reload via inline script).
 
 ---
 
-_Created with ❤️ by Thumeena Toto Pengchai_
+## 🛠 Tech Stack
+
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat-square&logo=astro&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure_Static_Web_Apps-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+
+---
+
+## ✨ Key Features
+
+- **🎬 Cinematic Scroll Snapping** — Custom `requestAnimationFrame` scroll engine with `easeInOutCubic` easing (820ms), supports wheel, touch swipe, and keyboard navigation
+- **🎭 Dual-Character Theme** — Seamless Light ↔ Dark switch with `IceBurst` particle animation
+- **🖱️ Magnetic Custom Cursor** — Framer Motion cursor with magnetic hover on interactive elements
+- **📜 Re:Zero Narrative Sections** — Each section named after Re:Zero story beats (Save Points, The Chronicle, Trials Overcome, Divine Protections)
+- **⚡ Astro Islands Architecture** — Only interactive components hydrate on client (`client:load` / `client:visible`), maximising Lighthouse score
+- **📱 Fully Responsive Navbar** — Full pill on desktop, hamburger dropdown on mobile
+- **💀 Themed 404 Page** — Re:Zero "Timeline Not Found" death mark animation with floating orbs
+
+---
+
+## 📂 Project Structure
+
+```
+ThumeenaDev/
+├── .github/
+│   └── workflows/
+│       └── azure-static-web-apps-*.yml  # CI/CD — deploys on every push to main
+└── portfolio-cv/                        # Astro project root
+    ├── public/                          # Static assets (images, resume.pdf)
+    ├── src/
+    │   ├── components/
+    │   │   ├── Navbar.tsx               # Responsive floating nav
+    │   │   ├── Hero.tsx                 # Full-screen parallax hero
+    │   │   ├── Intro.tsx                # Dark intro / about section
+    │   │   ├── Skills.tsx               # Divine Protections — skill grid
+    │   │   ├── Projects.tsx             # The Chronicles — project cards
+    │   │   ├── Trials.tsx               # Trials Overcome — marquee certs
+    │   │   ├── SavePoints.tsx           # Save Points — timeline experience
+    │   │   ├── NotFound.tsx             # Re:Zero 404 page
+    │   │   └── CustomCursor.tsx         # Magnetic cursor
+    │   ├── layouts/
+    │   │   └── Layout.astro             # HTML shell + global fonts
+    │   ├── pages/
+    │   │   ├── index.astro              # Main page + scroll controller
+    │   │   └── 404.astro                # 404 route
+    │   └── styles/
+    │       └── global.css               # Design tokens, scroll snap, utilities
+    └── astro.config.mjs
+```
+
+---
+
+## 🚀 Local Development
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/tophbeifong123/ThumeenaDev.git
+cd ThumeenaDev/portfolio-cv
+
+# 2. Install dependencies
+npm install
+
+# 3. Start dev server
+npm run dev
+# → http://localhost:4321
+```
+
+---
+
+## ☁️ Deployment (Azure Static Web Apps)
+
+This project uses **Azure Static Web Apps** (Free tier) with **GitHub Actions CI/CD**.
+
+Every `git push` to `main` triggers the workflow automatically:
+
+```
+git push → GitHub Actions → Oryx Build (npm run build) → Azure CDN
+```
+
+**Workflow config:** `.github/workflows/azure-static-web-apps-ambitious-coast-03b85f800.yml`
+
+| Key | Value |
+|-----|-------|
+| `app_location` | `/portfolio-cv` |
+| `output_location` | `dist` |
+| Custom Domain | `www.thumeena.dev` |
+
+---
+
+## 📬 Contact
+
+| Channel | Link |
+|---------|------|
+| 🌐 Portfolio | [www.thumeena.dev](https://www.thumeena.dev) |
+| 📧 Email | [thrrmunaphengchay@gmail.com](mailto:thrrmunaphengchay@gmail.com) |
+| 💼 LinkedIn | [Thumeena Pengchai](https://www.linkedin.com/in/thumeena-pengchai-6babb5351/) |
+| 🐙 GitHub | [@tophbeifong123](https://github.com/tophbeifong123) |
+
+---
+
+<div align="center">
+
+_"I don't know when I started. I don't know when it will end. But I'll keep going."_  
+**— Natsuki Subaru, Re:Zero**
+
+Made with 💜 by **Thummeena Toto Pengchai**
+
+</div>
