@@ -11,6 +11,8 @@ on:
 jobs:
   auto_commit:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # 👈 [Best Practice] สั่งเปิดสิทธิ์ให้ Bot สามารถเขียน/Push โค้ดลง Repo ได้
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
