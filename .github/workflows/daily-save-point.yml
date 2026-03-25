@@ -29,8 +29,8 @@ jobs:
 
       - name: 🚀 Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "Thummeena Pengchai"
+          git config --global user.email "thrrmunaphengchay@gmail.com"
           git add SAVE_POINT.md
           # เช็คก่อนว่ามีอะไรเปลี่ยนไหม ถ้ามีค่อย commit
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: 🔁 Auto-sync save point timeline" && git push)
