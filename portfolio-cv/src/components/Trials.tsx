@@ -1,78 +1,83 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, Code2, ShieldAlert, Trophy, Star, Server } from "lucide-react";
+import { Code2, ShieldAlert, Trophy } from "lucide-react";
 
 /* ── Data ────────────────────────────────────────────────────────────────── */
 const TRIALS_DATA = [
   {
     id: 1,
     category: "Competitive",
-    icon: <Code2 className="w-5 h-5" />,
-    title: "ICPC Bangkok Regional",
-    detail: "เข้าร่วมการแข่งขันเขียนโปรแกรมระดับประเทศ",
-    date: "2023",
+    icon: <Trophy className="w-5 h-5" />,
+    title: "ICPC Asia Bangkok 2025",
+    detail:
+      "เข้าร่วมการแข่งขันเขียนโปรแกรมระดับภูมิภาคเอเชีย (Regional Contest)",
+    date: "พ.ย. 2025",
     color: "#8B5CF6",
   },
   {
     id: 2,
-    category: "Algorithm",
+    category: "Cybersecurity",
     icon: <ShieldAlert className="w-5 h-5" />,
-    title: "Codeforces Rating 1400+",
-    detail: "แก้ปัญหามากกว่า 300 ข้อ",
-    date: "2022-2025",
-    color: "#EA580C",
+    title: "CTF BOOT CAMP รุ่นที่ 2",
+    detail:
+      "ผ่านการอบรมเชิงปฏิบัติการโดยสถาบันวิชาความมั่นคงปลอดภัยไซเบอร์แห่งชาติ (NCSA)",
+    date: "ก.ค. 2025",
+    color: "#EF4444",
   },
   {
     id: 3,
-    category: "Cloud & System",
-    icon: <Server className="w-5 h-5" />,
-    title: "Microsoft Azure Fundamentals",
-    detail: "AZ-900 Certification",
-    date: "2024",
+    category: "Cybersecurity",
+    icon: <ShieldAlert className="w-5 h-5" />,
+    title: "PSU Cyber & Data Privacy #2",
+    detail:
+      'ผ่านการอบรมเชิงปฏิบัติการ "Cybersecurity and AI" โดย ม.สงขลานครินทร์',
+    date: "มิ.ย. 2025",
     color: "#10B981",
   },
   {
     id: 4,
-    category: "Hackathon",
-    icon: <Star className="w-5 h-5" />,
-    title: "Global Game Jam (BKK)",
-    detail: "สร้างเกมเสร็จภายใน 48 ชั่วโมง",
-    date: "2023",
-    color: "#F43F5E",
+    category: "Web Dev",
+    icon: <Trophy className="w-5 h-5" />,
+    title: "PSU Open API Contest",
+    detail:
+      "ได้รับรางวัลรองชนะเลิศอันดับ 1 การแข่งขันพัฒนาแอปพลิเคชันระดับนักศึกษา",
+    date: "มิ.ย. 2025",
+    color: "#F59E0B",
   },
   {
     id: 5,
-    category: "Web Dev",
-    icon: <Award className="w-5 h-5" />,
-    title: "React Advanced Certification",
-    detail: "Best Practices & Architecture",
-    date: "2024",
-    color: "#3B82F6",
+    category: "Algorithm",
+    icon: <Code2 className="w-5 h-5" />,
+    title: "Codeforces Rating 800+",
+    detail: "แก้ปัญหาอัลกอริทึมมากกว่า 300 ข้อบนแพลตฟอร์มแข่งขันระดับโลก",
+    date: "2022-2025",
+    color: "#EA580C",
   },
-  // {
-  //   id: 6,
-  //   category: "AI & Data",
-  //   icon: <Trophy className="w-5 h-5" />,
-  //   title: "SuperAI Engineer Season 3",
-  //   detail: "ผ่านการทดสอบเข้าแคมป์ระดับประเทศ",
-  //   date: "2023",
-  //   color: "#EAB308",
-  // },
   {
     id: 6,
+    category: "Cybersecurity",
+    icon: <ShieldAlert className="w-5 h-5" />,
+    title: "Cisco Ethical Hacker",
+    detail:
+      "หลักสูตร Penetration Testing & Ethical Hacking (Cisco)",
+    date: "2026",
+    color: "#3B82F6",
+  },
+  {
+    id: 7,
     category: "Project",
     icon: <Code2 className="w-5 h-5" />,
-    title: "NSC Thailand",
-    detail: "เข้าร่วมนำเสนอโครงงานซอฟต์แวร์แห่งชาติ",
-    date: "2024",
+    title: "NSC Thailand 2026",
+    detail: "เข้าร่วมนำเสนอโครงงานซอฟต์แวร์แห่งชาติ รอบระดับประเทศ (ภาคใต้)",
+    date: "2026",
     color: "#06B6D4",
   },
 ];
 
 // Combine into 3 distinct rows for visual variety
 const ROW1 = [...TRIALS_DATA];
-const ROW2 = [...TRIALS_DATA.slice(3), ...TRIALS_DATA.slice(0, 3)];
-const ROW3 = [...TRIALS_DATA.slice(1), ...TRIALS_DATA.slice(0, 1)];
+const ROW2 = [...TRIALS_DATA.slice(2), ...TRIALS_DATA.slice(0, 2)];
+const ROW3 = [...TRIALS_DATA.slice(4), ...TRIALS_DATA.slice(0, 4)];
 
 const MARQUEE_ROWS = [
   { id: "row1", speed: "40s", direction: "normal", items: [...ROW1, ...ROW1] },
@@ -170,12 +175,16 @@ export default function Trials() {
                 {/* Colored gradient top line */}
                 <div
                   className="absolute top-0 left-0 w-full h-[2px] opacity-50 group-hover:opacity-100 transition-opacity"
-                  style={{ background: `linear-gradient(to right, ${item.color}, transparent)` }}
+                  style={{
+                    background: `linear-gradient(to right, ${item.color}, transparent)`,
+                  }}
                 />
                 {/* Hover shimmer sweep */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                  style={{ background: `radial-gradient(ellipse at 20% 20%, color-mix(in srgb, ${item.color} 8%, transparent) 0%, transparent 60%)` }}
+                  style={{
+                    background: `radial-gradient(ellipse at 20% 20%, color-mix(in srgb, ${item.color} 8%, transparent) 0%, transparent 60%)`,
+                  }}
                 />
 
                 <div className="flex items-start justify-between mb-8">

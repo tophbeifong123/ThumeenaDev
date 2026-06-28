@@ -105,10 +105,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 
-  /* mandatory = hard full-page snap (smoother + faster than proximity) */
-  scroll-snap-type: y mandatory;
-  /* prevent native rubber-band bounce fighting with snap */
-  overscroll-behavior-y: none;
   scroll-behavior: smooth;
 
   /* tell GPU this will scroll → no repaint mid-scroll */
@@ -124,9 +120,6 @@ body {
 
 /* ── Snap sections ──────────────────────────────────────────────────── */
 .snap-section {
-  scroll-snap-align: start;
-  /* allow continuous scroll within long sections */
-  scroll-snap-stop: normal;
   min-height: 100dvh;
   display: grid;
   place-items: center;

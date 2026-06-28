@@ -3,7 +3,6 @@ import { motion, useInView } from "framer-motion";
 import {
   Code2,
   GraduationCap,
-  Users,
   BookOpen,
   Star,
   Trophy,
@@ -131,11 +130,6 @@ const Entry = ({
           viewport={{ once: false, amount: 0.1 }}
           className="absolute inset-0 z-0 pointer-events-none"
         >
-          {/* 
-            ปรับปรุงความชัดของรูปได้ตรงนี้ครับ!
-            - opacity-40 โหมด Light / dark:opacity-50 โหมดสว่าง
-            - ลบ mix-blend ออกเพื่อให้สีรูป 100% Original 
-          */}
           <img
             src={pt.bgImage}
             alt={pt.title}
@@ -339,10 +333,15 @@ const Entry = ({
 
 export default function SavePoints() {
   return (
-    <>
+    <div className="relative w-full">
       {POINTS.map((pt, i) => (
-        <Entry key={pt.id} pt={pt} isLast={i === POINTS.length - 1} index={i} />
+        <Entry
+          key={pt.id}
+          pt={pt}
+          isLast={i === POINTS.length - 1}
+          index={i}
+        />
       ))}
-    </>
+    </div>
   );
 }
